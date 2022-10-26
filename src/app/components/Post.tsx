@@ -6,8 +6,8 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 
 export const Post: React.FC<{
   post: IPost;
-  handleEdit: (index) => void;
-  handleDelete: (index) => void;
+  handleEdit: (index: number) => void;
+  handleDelete: (index: number) => void;
 }> = ({ post, handleEdit, handleDelete }) => {
   return (
     <Box

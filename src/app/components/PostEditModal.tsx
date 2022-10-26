@@ -2,7 +2,7 @@ import { Box, Button, Modal, TextField } from "@mui/material";
 import React from "react";
 
 const style = {
-  position: "absolute" as "absolute",
+  position: "absolute",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
@@ -10,14 +10,14 @@ const style = {
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
-  p: 4
+  p: 4,
 };
 
 export const PostEditModal: React.FC<{
   openEditModal: boolean;
-  setOpenEditModal: (check) => void;
-  setTitle: (event) => void;
-  setBody: (event) => void;
+  setOpenEditModal: (check: boolean) => void;
+  setTitle: (event: any) => void;
+  setBody: (event: any) => void;
   handleSave: () => void;
 }> = ({ openEditModal, setOpenEditModal, setTitle, setBody, handleSave }) => {
   return (

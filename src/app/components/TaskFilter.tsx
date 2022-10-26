@@ -3,14 +3,14 @@ import React from "react";
 
 export const TaskFilter: React.FC<{
   filterByStatus: string;
-  changeFilterByTaskName: (event) => void;
-  handleChangeStatus: (event) => void;
+  changeFilterByTaskName: (event: any) => void;
+  handleChangeStatus: (event: any) => void;
   handleApplyFilter: () => void;
 }> = ({
   filterByStatus,
   changeFilterByTaskName,
   handleChangeStatus,
-  handleApplyFilter
+  handleApplyFilter,
 }) => {
   return (
     <Box display="flex" justifyContent="center" mb={2}>

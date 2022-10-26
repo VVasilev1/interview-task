@@ -25,19 +25,19 @@ export interface ICompany {
 export const UserDefaultState = {
   id: 0,
   name: "",
-  userName: "",
+  username: "",
   email: "",
   phone: "",
   website: "",
   address: {
     city: "",
     street: "",
-    SUITE: "",
-    ZIPCODE: ""
+    suite: "",
+    zipcode: "",
   },
   company: {
-    COMPANYNAME: "",
-    COMPANYCATCHPHRASE: "",
-    COMPANYBS: ""
-  }
+    name: "",
+    catchPhrase: "",
+    bs: "",
+  },
 };
