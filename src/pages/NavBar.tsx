@@ -10,12 +10,12 @@ import Menu from "@mui/material/Menu";
 import { useNavigate } from "react-router-dom";
 
 export const NavBar: React.FC<{}> = () => {
-  const [anchorEl, setAnchorEl] = useState(null);
-  const [open, setOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState<any>(null);
+  const [open, setOpen] = useState<boolean>(false);
   const navigation = useNavigate();
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setOpen(!open);
-    // setAnchorEl(event.currentTarget);
+    setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
     setAnchorEl(null);
@@ -45,26 +45,25 @@ export const NavBar: React.FC<{}> = () => {
             onClick={handleClick}
           >
             <MenuIcon />
-            {anchorEl !== null && (
-              <Menu
-                id="demo-positioned-menu"
-                aria-labelledby="demo-positioned-button"
-                anchorEl={anchorEl}
-                open={open}
-                onClose={handleClose}
-                anchorOrigin={{
-                  vertical: "top",
-                  horizontal: "left",
-                }}
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "left",
-                }}
-              >
-                <MenuItem onClick={handleClickUsers}>Users</MenuItem>
-                <MenuItem onClick={handleCliskTasks}>Tasks</MenuItem>
-              </Menu>
-            )}
+
+            <Menu
+              id="demo-positioned-menu"
+              aria-labelledby="demo-positioned-button"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              anchorOrigin={{
+                vertical: "top",
+                horizontal: "left",
+              }}
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "left",
+              }}
+            >
+              <MenuItem onClick={handleClickUsers}>Users</MenuItem>
+              <MenuItem onClick={handleCliskTasks}>Tasks</MenuItem>
+            </Menu>
           </IconButton>
 
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
