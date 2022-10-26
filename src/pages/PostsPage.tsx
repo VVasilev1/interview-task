@@ -15,7 +15,7 @@ export const PostsPage: React.FC<{}> = () => {
   const [postsState, setPostsState] = useState<IPost[]>(posts);
   const [title, setTitle] = useState<string>("");
   const [body, setBody] = useState<string>("");
-  const [selectedId, setSelectedId] = useState();
+  const [selectedId, setSelectedId] = useState<number>();
   const [openEditModal, setOpenEditModal] = useState<boolean>(false);
   const location = useLocation();
   const userId = location.search.substring(location.search.indexOf("=") + 1);
@@ -28,7 +28,7 @@ export const PostsPage: React.FC<{}> = () => {
     dispatch(updatePost(newPost));
     setOpenEditModal(false);
   };
-  const handleEdit = (index) => {
+  const handleEdit = (index: number) => {
     setSelectedId(index);
     setOpenEditModal(true);
   };

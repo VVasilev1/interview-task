@@ -5,7 +5,7 @@ import { ITask } from "../model/ITask";
 export const TaskTable: React.FC<{
   taskState: ITask[][];
   selectedPagination: string;
-  handleChange: (event) => void;
+  handleChange: (event: any) => void;
 }> = ({ taskState, selectedPagination, handleChange }) => {
   return (
     <Box>
@@ -16,7 +16,7 @@ export const TaskTable: React.FC<{
             <th>title</th>
             <th>completed</th>
           </tr>
-          {taskState[selectedPagination].map((element, index) => {
+          {taskState[+selectedPagination].map((element, index) => {
             return (
               <tr key={index}>
                 <td>{element.userId}</td>

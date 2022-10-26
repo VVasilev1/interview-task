@@ -15,7 +15,7 @@ export const NavBar: React.FC<{}> = () => {
   const navigation = useNavigate();
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setOpen(!open);
-    setAnchorEl(event.currentTarget);
+    // setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
     setAnchorEl(null);
@@ -54,11 +54,11 @@ export const NavBar: React.FC<{}> = () => {
                 onClose={handleClose}
                 anchorOrigin={{
                   vertical: "top",
-                  horizontal: "left"
+                  horizontal: "left",
                 }}
                 transformOrigin={{
                   vertical: "top",
-                  horizontal: "left"
+                  horizontal: "left",
                 }}
               >
                 <MenuItem onClick={handleClickUsers}>Users</MenuItem>

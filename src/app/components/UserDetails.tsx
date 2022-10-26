@@ -20,7 +20,7 @@ export const UserDetails: React.FC<{
   const handleSeePosts = () => {
     navigation("/posts?userId=" + details.id);
   };
-  const handleChangeForm = (name) => (event) => {
+  const handleChangeForm = (name: string) => (event: any) => {
     if (event.target.value === "") {
       switch (name) {
         case "name":

@@ -12,7 +12,7 @@ export const TaskPage: React.FC<{}> = () => {
   const [showError, setShowError] = useState<boolean>(false);
   const [filterByTaskName, setFilterByTaskName] = useState<string>("");
   const [selectedPagination, setSelectedPagination] = useState<string>("0");
-  const partitionData = (tasks) => {
+  const partitionData = (tasks: ITask[]) => {
     let newTasks: ITask[][] = [[]];
     for (let index = 0; index < tasks.length; index++) {
       const arrayIndex = Math.floor(index / 10);
@@ -47,7 +47,7 @@ export const TaskPage: React.FC<{}> = () => {
   const handleChangeStatus = (event: SelectChangeEvent) => {
     setFilterByStatus(event.target.value);
   };
-  const changeFilterByTaskName = (event) => {
+  const changeFilterByTaskName = (event: any) => {
     setFilterByTaskName(event.target.value);
   };
   const handleApplyFilter = () => {
